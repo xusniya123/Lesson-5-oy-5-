@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lesson 5 oy (5)</title>
+ </head>
+
+
+<body>
+  <input type="text" id = "nameInput" placeholder="Ismingizni kiriting"> 
+  <button id = "button" onclick="showName()">Ismni chiqarish</button>   
+<div id = "displayName"></div>
+<script>
+    // let firstName = prompt("Ismingizni kiriting!");
+
+function showName() {
+    var name = document.getElementById("nameInput").value;
+    console.log(name);
+    document.getElementById("displayName").textContent = name;
+}
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <img id="demo" src="https://img.freepik.com/free-photo/white-notebook-black-data-firewall_1150-1733.jpg" alt="haker">
+    <script>
+        document.getElementById("demo").src = "data:image/jpeg;base64,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";
+    </script>  -->
+<!-- // const element = document.getElementById("smile");
+// element.src = "./haher2.jpg";
+</script> -->
+
+<!-- <h1 id = p2> Hello Mars!</h1>
+<script>
+    document.getElementById("p2").style.background = "red";
+    document.getElementById("p2").style.color = "blue";
+</script> -->
+<!-- <img id="demo" src="https://img.freepik.com/free-photo/white-notebook-black-data-firewall_1150-1733.jpg" alt="haker">
+
+<script>
+    const element = document.getElementById( demo)
+    document.getElementById("demo").style.width = "90%";
+    document.getElementById("demo").style.border = "3px solid aqua";
+</script> -->
+
+
+
+</body>
+</html>
